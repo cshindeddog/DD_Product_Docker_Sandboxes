@@ -1,9 +1,9 @@
 init_config:
 
 instances:
-  - host: db                 # 🔑 docker-compose service name
+  - host: db                 # docker-compose service name
     port: 5432
-    dbm: true                # 🔑 enable Database Monitoring
+    dbm: true                # enable Database Monitoring
     username: dduser
     password: ddpass
     dbname: demo

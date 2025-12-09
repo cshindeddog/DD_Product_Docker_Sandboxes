@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dockerized Web + Python Backend</title>
+</head>
+<body>
+  <h1>Hello from the frontend container 👋</h1>
+  <button id="call-api">Call Backend</button>
+  <pre id="result"></pre>
+
+  <script>
+    document.getElementById('call-api').onclick = async () => {
+      const res = await fetch('http://localhost:8000/');
+      const data = await res.json();
+      document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+    };
+  </script>
+</body>
+</html>
+

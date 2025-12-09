@@ -1,0 +1,29 @@
+init_config:
+
+instances:
+  - host: db                 # 🔑 docker-compose service name
+    port: 5432
+    dbm: true                # 🔑 enable Database Monitoring
+    username: dduser
+    password: ddpass
+    dbname: demo
+
+    query_samples:
+      enabled: true
+      events_statements:
+        enabled: true
+        sampling_rate: 1.0
+
+    # (optional but recommended)
+    tags:
+      - env:dev
+      - service:demo-postgres
+      - db_version:1.0
+
+    # You can fine-tune collection here:
+    # query_samples:
+    #   enabled: true
+    # query_metrics:
+    #   enabled: true
+    # collect_statement_statistics: true
+

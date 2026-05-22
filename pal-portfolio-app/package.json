@@ -1,0 +1,23 @@
+{
+  "name": "pal-portfolio-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "predev": "lsof -ti :5101 2>/dev/null | xargs kill -9 2>/dev/null || true",
+    "dev": "next dev -p 5101",
+    "build": "next build",
+    "prestart": "lsof -ti :5101 2>/dev/null | xargs kill -9 2>/dev/null || true",
+    "start": "next start -p 5101"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "next": "^15",
+    "react": "^19",
+    "react-dom": "^19",
+    "react-markdown": "^9",
+    "remark-gfm": "^4"
+  },
+  "overrides": {
+    "postcss": ">=8.5.10"
+  }
+}
